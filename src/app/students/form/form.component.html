@@ -1,0 +1,40 @@
+<form class="form" [formGroup]="addEditStudentsForm" novalidate>
+    <h1 class="form__title">Форма</h1>
+    <div class="form__item">
+        <label>
+            <input class="form__input" formControlName="id" placeholder="id" hidden/>
+        </label>
+    </div>
+    <div formGroupName="fullName">
+
+        <div class="form__item">
+            <label>
+                <input class="form__input" formControlName="name" placeholder="Имя"/>
+            </label>
+        </div>
+        <div class="form__item">
+            <label>
+                <input class="form__input" formControlName="surname" placeholder="Фамилия"/>
+            </label>
+        </div>
+        <div class="form__item">
+            <label>
+                <input class="form__input" formControlName="patronymic" placeholder="Отчество"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="form__item">
+        <label>
+            <input class="form__input" formControlName="birthDate" placeholder="Дата рождения"/>
+        </label>
+    </div>
+
+    <div class="form__item">
+        <label>
+            <input class="form__input" formControlName="gpa" placeholder="Средний балл"/>
+        </label>
+    </div>
+    <input class="form__btn" type="button" value="Отправить" (click)="sendForm()" routerLink="">
+</form>
+

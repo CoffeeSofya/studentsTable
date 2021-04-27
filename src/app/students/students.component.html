@@ -1,0 +1,38 @@
+<div class="students">
+    <div class="wrap">
+        <label>
+            <input class="students__input-search" placeholder="Поиск студента" [(ngModel)]="queryString">
+        </label>
+        <button class="students__btn-underachieving" (click)="getUnderachieving()">Неуспевающие студенты</button>
+        <button class="students__btn-add" routerLink="add">Добавить студента</button>
+
+        <table>
+            <tr>
+                <td>Фамилия <input type="button" class="btn-sort" (click)="sortBySurname()"></td>
+                <td>Имя <input type="button" class="btn-sort" (click)="sortByName()"></td>
+                <td>Отчество <input type="button" class="btn-sort" (click)="sortByPatronymic()"></td>
+                <td>Дата рождения</td>
+                <td>Средний балл <input type="button" class="btn-sort" (click)="sortByGPA()"></td>
+                <td>Удаление</td>
+                <td>Редактирование</td>
+            </tr>
+            <tr *ngFor="let item of studentsList | search: queryString"
+                [ngClass]="{'red': item.gpa < 3 && highlighting, 'black': item.gpa >= 3 && highlighting, del: item.deleted}">
+                <td>{{item.surname}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.patronymic}}</td>
+                <td>{{item.birthDate}}</td>
+                <td>{{item.gpa}}</td>
+                <td>
+                    <button class="students__btn-del" (click)="deleteStudent(item.id)">Удалить</button>
+                </td>
+                <td>
+                    <button class="students__btn-edit" (click)="methodEditStudent(item.id)">Редактировать</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <app-form (onStudentAdd)="onStudentAdd($event)" [editStudent]="editStudent"></app-form>
+</div>
+

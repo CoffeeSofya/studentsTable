@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "surname": "Иванов",
+    "name": "Иван",
+    "patronymic": "Иванович",
+    "birthDate": "21.05.2000",
+    "gpa": 2.2
+  },
+  {
+    "id": 2,
+    "surname": "Петров",
+    "name": "Петр",
+    "patronymic": "Петрович",
+    "birthDate": "12.12.1987",
+    "gpa": 4.7
+  },
+  {
+    "id": 3,
+    "surname": "Плюшкин",
+    "name": "Евгений",
+    "patronymic": "Павлович",
+    "birthDate": "05.01.1995",
+    "gpa": 2.7
+  },
+  {
+    "id": 4,
+    "surname": "Краснова",
+    "name": "Ирина",
+    "patronymic": "Леонидовна",
+    "birthDate": "15.06.1973",
+    "gpa": 2.9
+  },
+  {
+    "id": 5,
+    "surname": "Смирнова",
+    "name": "Татьяна",
+    "patronymic": "Михайловна",
+    "birthDate": "11.05.2005",
+    "gpa": 5.0
+  }
+]
